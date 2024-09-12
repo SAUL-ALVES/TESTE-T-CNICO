@@ -16,7 +16,7 @@ def is_fibonacci(num):
         a, b = b, a + b
     return num == b or num == 0
 
-fibonacci_test_number = 21  # número para testar
+fibonacci_test_number = 21 
 if is_fibonacci(fibonacci_test_number):
     print(f"Questão 2: O número {fibonacci_test_number} pertence à sequência de Fibonacci.")
 else:
@@ -25,17 +25,16 @@ else:
 # Questão 3: Faturamento diário de uma distribuidora
 faturamento_diario = [2000, 2500, 1800, 0, 2700, 3000, 0, 3500, 3800, 4000, 0, 0, 4200, 2300, 2200]
 
-# Remover dias sem faturamento
+
 faturamento_valido = [dia for dia in faturamento_diario if dia > 0]
 
-# Menor e maior valor de faturamento
+
 menor_faturamento = min(faturamento_valido)
 maior_faturamento = max(faturamento_valido)
 
-# Cálculo da média mensal
+
 media_faturamento = sum(faturamento_valido) / len(faturamento_valido)
 
-# Dias com faturamento superior à média
 dias_acima_da_media = sum(1 for dia in faturamento_valido if dia > media_faturamento)
 
 print(f"Questão 3: Menor faturamento = {menor_faturamento}")
